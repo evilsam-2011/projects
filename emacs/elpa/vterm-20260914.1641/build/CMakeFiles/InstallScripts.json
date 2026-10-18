@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/sam/.emacs.d/elpa/vterm-20260914.1641/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

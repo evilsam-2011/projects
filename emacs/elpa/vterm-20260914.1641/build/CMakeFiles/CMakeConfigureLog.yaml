@@ -1,0 +1,1375 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/run/current-system/sw/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+    searched_directories:
+      - "/run/wrappers/bin/uname"
+      - "/home/sam/.nix-profile/bin/uname"
+      - "/nix/profile/bin/uname"
+      - "/home/sam/.local/state/nix/profile/bin/uname"
+      - "/etc/profiles/per-user/sam/bin/uname"
+      - "/nix/var/nix/profiles/default/bin/uname"
+    found: "/run/current-system/sw/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake:218 (message)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      The system is: Linux - 7.2.9 - x86_64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gmake"
+      - "make"
+      - "smake"
+    candidate_directories:
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/run/current-system/sw/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+    searched_directories:
+      - "/run/wrappers/bin/gmake"
+      - "/home/sam/.nix-profile/bin/gmake"
+      - "/nix/profile/bin/gmake"
+      - "/home/sam/.local/state/nix/profile/bin/gmake"
+      - "/etc/profiles/per-user/sam/bin/gmake"
+      - "/nix/var/nix/profiles/default/bin/gmake"
+      - "/run/current-system/sw/bin/gmake"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/gmake"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/gmake"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/gmake"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/gmake"
+      - "/run/wrappers/bin/make"
+      - "/home/sam/.nix-profile/bin/make"
+      - "/nix/profile/bin/make"
+      - "/home/sam/.local/state/nix/profile/bin/make"
+      - "/etc/profiles/per-user/sam/bin/make"
+      - "/nix/var/nix/profiles/default/bin/make"
+    found: "/run/current-system/sw/bin/make"
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:64 (_cmake_find_compiler)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER"
+    description: "C compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cc"
+      - "gcc"
+      - "cl"
+      - "bcc"
+      - "xlc"
+      - "icx"
+      - "clang"
+    candidate_directories:
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/run/current-system/sw/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+    searched_directories:
+      - "/run/wrappers/bin/cc"
+      - "/home/sam/.nix-profile/bin/cc"
+      - "/nix/profile/bin/cc"
+      - "/home/sam/.local/state/nix/profile/bin/cc"
+      - "/etc/profiles/per-user/sam/bin/cc"
+      - "/nix/var/nix/profiles/default/bin/cc"
+    found: "/run/current-system/sw/bin/cc"
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/"
+    found: "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /run/current-system/sw/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/sam/.emacs.d/elpa/vterm-20260914.1641/build/CMakeFiles/4.4.3/CompilerIdC/a.out
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "/run/current-system/sw/bin/"
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+    found: "/run/current-system/sw/bin/ar"
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ranlib"
+    candidate_directories:
+      - "/run/current-system/sw/bin/"
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+    found: "/run/current-system/sw/bin/ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "/run/current-system/sw/bin/"
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+    found: "/run/current-system/sw/bin/strip"
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "/run/current-system/sw/bin/"
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+    found: "/run/current-system/sw/bin/ld"
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nm"
+    candidate_directories:
+      - "/run/current-system/sw/bin/"
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+    found: "/run/current-system/sw/bin/nm"
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objdump"
+    candidate_directories:
+      - "/run/current-system/sw/bin/"
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+    found: "/run/current-system/sw/bin/objdump"
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objcopy"
+    candidate_directories:
+      - "/run/current-system/sw/bin/"
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+    found: "/run/current-system/sw/bin/objcopy"
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "readelf"
+    candidate_directories:
+      - "/run/current-system/sw/bin/"
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+    found: "/run/current-system/sw/bin/readelf"
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dlltool"
+    candidate_directories:
+      - "/run/current-system/sw/bin/"
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+    searched_directories:
+      - "/run/current-system/sw/bin/dlltool"
+      - "/run/wrappers/bin/dlltool"
+      - "/home/sam/.nix-profile/bin/dlltool"
+      - "/nix/profile/bin/dlltool"
+      - "/home/sam/.local/state/nix/profile/bin/dlltool"
+      - "/etc/profiles/per-user/sam/bin/dlltool"
+      - "/nix/var/nix/profiles/default/bin/dlltool"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/dlltool"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/dlltool"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/dlltool"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/dlltool"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "addr2line"
+    candidate_directories:
+      - "/run/current-system/sw/bin/"
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+    found: "/run/current-system/sw/bin/addr2line"
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "/run/current-system/sw/bin/"
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+    searched_directories:
+      - "/run/current-system/sw/bin/tapi"
+      - "/run/wrappers/bin/tapi"
+      - "/home/sam/.nix-profile/bin/tapi"
+      - "/nix/profile/bin/tapi"
+      - "/home/sam/.local/state/nix/profile/bin/tapi"
+      - "/etc/profiles/per-user/sam/bin/tapi"
+      - "/nix/var/nix/profiles/default/bin/tapi"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/tapi"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/tapi"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/tapi"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ar-16.2"
+      - "gcc-ar-16"
+      - "gcc-ar16"
+      - "gcc-ar"
+    candidate_directories:
+      - "/run/current-system/sw/bin/"
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+    searched_directories:
+      - "/run/current-system/sw/bin/gcc-ar-16.2"
+      - "/run/wrappers/bin/gcc-ar-16.2"
+      - "/home/sam/.nix-profile/bin/gcc-ar-16.2"
+      - "/nix/profile/bin/gcc-ar-16.2"
+      - "/home/sam/.local/state/nix/profile/bin/gcc-ar-16.2"
+      - "/etc/profiles/per-user/sam/bin/gcc-ar-16.2"
+      - "/nix/var/nix/profiles/default/bin/gcc-ar-16.2"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/gcc-ar-16.2"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/gcc-ar-16.2"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/gcc-ar-16.2"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/gcc-ar-16.2"
+      - "/run/current-system/sw/bin/gcc-ar-16"
+      - "/run/wrappers/bin/gcc-ar-16"
+      - "/home/sam/.nix-profile/bin/gcc-ar-16"
+      - "/nix/profile/bin/gcc-ar-16"
+      - "/home/sam/.local/state/nix/profile/bin/gcc-ar-16"
+      - "/etc/profiles/per-user/sam/bin/gcc-ar-16"
+      - "/nix/var/nix/profiles/default/bin/gcc-ar-16"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/gcc-ar-16"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/gcc-ar-16"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/gcc-ar-16"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/gcc-ar-16"
+      - "/run/current-system/sw/bin/gcc-ar16"
+      - "/run/wrappers/bin/gcc-ar16"
+      - "/home/sam/.nix-profile/bin/gcc-ar16"
+      - "/nix/profile/bin/gcc-ar16"
+      - "/home/sam/.local/state/nix/profile/bin/gcc-ar16"
+      - "/etc/profiles/per-user/sam/bin/gcc-ar16"
+      - "/nix/var/nix/profiles/default/bin/gcc-ar16"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/gcc-ar16"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/gcc-ar16"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/gcc-ar16"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/gcc-ar16"
+      - "/run/current-system/sw/bin/gcc-ar"
+      - "/run/wrappers/bin/gcc-ar"
+      - "/home/sam/.nix-profile/bin/gcc-ar"
+      - "/nix/profile/bin/gcc-ar"
+      - "/home/sam/.local/state/nix/profile/bin/gcc-ar"
+      - "/etc/profiles/per-user/sam/bin/gcc-ar"
+      - "/nix/var/nix/profiles/default/bin/gcc-ar"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/gcc-ar"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/gcc-ar"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/gcc-ar"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/gcc-ar"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ranlib-16.2"
+      - "gcc-ranlib-16"
+      - "gcc-ranlib16"
+      - "gcc-ranlib"
+    candidate_directories:
+      - "/run/current-system/sw/bin/"
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+    searched_directories:
+      - "/run/current-system/sw/bin/gcc-ranlib-16.2"
+      - "/run/wrappers/bin/gcc-ranlib-16.2"
+      - "/home/sam/.nix-profile/bin/gcc-ranlib-16.2"
+      - "/nix/profile/bin/gcc-ranlib-16.2"
+      - "/home/sam/.local/state/nix/profile/bin/gcc-ranlib-16.2"
+      - "/etc/profiles/per-user/sam/bin/gcc-ranlib-16.2"
+      - "/nix/var/nix/profiles/default/bin/gcc-ranlib-16.2"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/gcc-ranlib-16.2"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/gcc-ranlib-16.2"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/gcc-ranlib-16.2"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/gcc-ranlib-16.2"
+      - "/run/current-system/sw/bin/gcc-ranlib-16"
+      - "/run/wrappers/bin/gcc-ranlib-16"
+      - "/home/sam/.nix-profile/bin/gcc-ranlib-16"
+      - "/nix/profile/bin/gcc-ranlib-16"
+      - "/home/sam/.local/state/nix/profile/bin/gcc-ranlib-16"
+      - "/etc/profiles/per-user/sam/bin/gcc-ranlib-16"
+      - "/nix/var/nix/profiles/default/bin/gcc-ranlib-16"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/gcc-ranlib-16"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/gcc-ranlib-16"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/gcc-ranlib-16"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/gcc-ranlib-16"
+      - "/run/current-system/sw/bin/gcc-ranlib16"
+      - "/run/wrappers/bin/gcc-ranlib16"
+      - "/home/sam/.nix-profile/bin/gcc-ranlib16"
+      - "/nix/profile/bin/gcc-ranlib16"
+      - "/home/sam/.local/state/nix/profile/bin/gcc-ranlib16"
+      - "/etc/profiles/per-user/sam/bin/gcc-ranlib16"
+      - "/nix/var/nix/profiles/default/bin/gcc-ranlib16"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/gcc-ranlib16"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/gcc-ranlib16"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/gcc-ranlib16"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/gcc-ranlib16"
+      - "/run/current-system/sw/bin/gcc-ranlib"
+      - "/run/wrappers/bin/gcc-ranlib"
+      - "/home/sam/.nix-profile/bin/gcc-ranlib"
+      - "/nix/profile/bin/gcc-ranlib"
+      - "/home/sam/.local/state/nix/profile/bin/gcc-ranlib"
+      - "/etc/profiles/per-user/sam/bin/gcc-ranlib"
+      - "/nix/var/nix/profiles/default/bin/gcc-ranlib"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/gcc-ranlib"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/gcc-ranlib"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/gcc-ranlib"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/gcc-ranlib"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:123 (try_compile)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/sam/.emacs.d/elpa/vterm-20260914.1641/build/CMakeFiles/CMakeScratch/TryCompile-DUymJj"
+      binary: "/home/sam/.emacs.d/elpa/vterm-20260914.1641/build/CMakeFiles/CMakeScratch/TryCompile-DUymJj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: false
+      stdout: |
+        Change Dir: '/home/sam/.emacs.d/elpa/vterm-20260914.1641/build/CMakeFiles/CMakeScratch/TryCompile-DUymJj'
+        
+        Run Build Command(s): /nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/bin/cmake -E env VERBOSE=1 /run/current-system/sw/bin/make -f Makefile cmTC_e7e7f/fast
+        /run/current-system/sw/bin/make  -f CMakeFiles/cmTC_e7e7f.dir/build.make CMakeFiles/cmTC_e7e7f.dir/build
+        make[1]: Entering directory '/home/sam/.emacs.d/elpa/vterm-20260914.1641/build/CMakeFiles/CMakeScratch/TryCompile-DUymJj'
+        Building C object CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o
+        /run/current-system/sw/bin/cc   -v -o CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o -c /nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/bin/gcc
+        Target: x86_64-unknown-linux-gnu
+        Configured with: ../gcc-16.2.0/configure --prefix=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-16.2.0 --with-gmp-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-6.3.0-dev/include --with-gmp-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-6.3.0/lib --with-mpfr-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.2-dev/include --with-mpfr-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.2/lib --with-mpc=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libmpc-1.4.1 --with-native-system-header-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-glibc-2.44-25-dev/include --with-build-sysroot=/ --with-gxx-include-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-16.2.0/include/c++/16.2.0/ --program-prefix= --enable-lto --disable-libstdcxx-pch --without-included-gettext --with-system-zlib --enable-static --enable-languages=c,c++ --disable-multilib --enable-plugin --disable-libcc1 --with-isl=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-isl-0.20 --disable-bootstrap --enable-default-pie --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=x86_64-unknown-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 16.2.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-fno-omit-frame-pointer' '-mno-omit-leaf-frame-pointer' '-mtls-dialect=gnu2' '-v' '-o' 'CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o' '-c' '-B' '/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/' '-idirafter' '/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include' '-idirafter' '/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed' '-B' '/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7e7f.dir/'
+         /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/cc1 -quiet -v -idirafter /nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include -idirafter /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed /nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e7e7f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mno-omit-leaf-frame-pointer -mtls-dialect=gnu2 -mtune=generic -march=x86-64 -version -fno-omit-frame-pointer -o /tmp/ccbKMuoO.s
+        GNU C23 (GCC) version 16.2.0 (x86_64-unknown-linux-gnu)
+        	compiled by GNU C version 16.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.20-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/../../../../x86_64-unknown-linux-gnu/include"
+        ignoring duplicate directory "/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include"
+        ignoring duplicate directory "/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include
+         /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/include
+         /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed
+         /nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include
+        End of search list.
+        Compiler executable checksum: 1fd89e2bd2926507b16c9ea06ee930e8
+        COLLECT_GCC_OPTIONS='-fno-omit-frame-pointer' '-mno-omit-leaf-frame-pointer' '-mtls-dialect=gnu2' '-v' '-o' 'CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o' '-c' '-B' '/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/' '-idirafter' '/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include' '-idirafter' '/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed' '-B' '/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7e7f.dir/'
+         as -v --64 -o CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o /tmp/ccbKMuoO.s
+        GNU assembler version 2.46 (x86_64-unknown-linux-gnu) using BFD version (GNU Binutils) 2.46
+        COMPILER_PATH=/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/:/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/
+        LIBRARY_PATH=/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/:/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/../../../
+        COLLECT_GCC_OPTIONS='-fno-omit-frame-pointer' '-mno-omit-leaf-frame-pointer' '-mtls-dialect=gnu2' '-v' '-o' 'CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o' '-c' '-B' '/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/' '-idirafter' '/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include' '-idirafter' '/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed' '-B' '/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_e7e7f
+        /nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7e7f.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/bin/gcc
+        COLLECT_LTO_WRAPPER=/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/lto-wrapper
+        Target: x86_64-unknown-linux-gnu
+        Configured with: ../gcc-16.2.0/configure --prefix=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-16.2.0 --with-gmp-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-6.3.0-dev/include --with-gmp-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-6.3.0/lib --with-mpfr-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.2-dev/include --with-mpfr-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.2/lib --with-mpc=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libmpc-1.4.1 --with-native-system-header-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-glibc-2.44-25-dev/include --with-build-sysroot=/ --with-gxx-include-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-16.2.0/include/c++/16.2.0/ --program-prefix= --enable-lto --disable-libstdcxx-pch --without-included-gettext --with-system-zlib --enable-static --enable-languages=c,c++ --disable-multilib --enable-plugin --disable-libcc1 --with-isl=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-isl-0.20 --disable-bootstrap --enable-default-pie --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=x86_64-unknown-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 16.2.0 (GCC) 
+        COMPILER_PATH=/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/:/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/
+        LIBRARY_PATH=/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/:/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/../../../
+        COLLECT_GCC_OPTIONS='-fno-omit-frame-pointer' '-mno-omit-leaf-frame-pointer' '-mtls-dialect=gnu2' '-v' '-o' 'cmTC_e7e7f' '-B' '/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/' '-idirafter' '/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include' '-idirafter' '/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed' '-B' '/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib' '-L/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib' '-L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0' '-L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib' '-L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e7e7f.'
+         /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/collect2 -plugin /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/liblto_plugin.so -plugin-opt=/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccG5q105.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --eh-frame-hdr -m elf_x86_64 -dynamic-linker /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e7e7f /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/Scrt1.o /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crti.o /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtbeginS.o -L/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0 -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0 -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/../../.. -dynamic-linker=/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtendS.o /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crtn.o
+        collect2 version 16.2.0
+        /nix/store/fy8mxgdjvjvmagv2igmj428a9j17hpcf-binutils-wrapper-2.46/bin/ld -plugin /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/liblto_plugin.so -plugin-opt=/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccG5q105.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --eh-frame-hdr -m elf_x86_64 -dynamic-linker /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e7e7f /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/Scrt1.o /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crti.o /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtbeginS.o -L/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0 -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0 -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/../../.. -dynamic-linker=/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtendS.o /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crtn.o
+        GNU ld (GNU Binutils) 2.46
+        COLLECT_GCC_OPTIONS='-fno-omit-frame-pointer' '-mno-omit-leaf-frame-pointer' '-mtls-dialect=gnu2' '-v' '-o' 'cmTC_e7e7f' '-B' '/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/' '-idirafter' '/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include' '-idirafter' '/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed' '-B' '/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib' '-L/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib' '-L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0' '-L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib' '-L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e7e7f.'
+        /run/current-system/sw/bin/cc  -v -Wl,-v CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o -o cmTC_e7e7f
+        make[1]: Leaving directory '/home/sam/.emacs.d/elpa/vterm-20260914.1641/build/CMakeFiles/CMakeScratch/TryCompile-DUymJj'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:255 (message)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include]
+          add: [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/include]
+          add: [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed]
+          add: [/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include]
+        end of search list found
+        collapse include dir [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include] ==> [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include]
+        collapse include dir [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/include] ==> [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/include]
+        collapse include dir [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed] ==> [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed]
+        collapse include dir [/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include] ==> [/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include]
+        implicit include dirs: [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include;/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/include;/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed;/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:291 (message)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild))("|,| |$)]
+        ignore line: [Change Dir: '/home/sam/.emacs.d/elpa/vterm-20260914.1641/build/CMakeFiles/CMakeScratch/TryCompile-DUymJj']
+        ignore line: []
+        ignore line: [Run Build Command(s): /nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/bin/cmake -E env VERBOSE=1 /run/current-system/sw/bin/make -f Makefile cmTC_e7e7f/fast]
+        ignore line: [/run/current-system/sw/bin/make  -f CMakeFiles/cmTC_e7e7f.dir/build.make CMakeFiles/cmTC_e7e7f.dir/build]
+        ignore line: [make[1]: Entering directory '/home/sam/.emacs.d/elpa/vterm-20260914.1641/build/CMakeFiles/CMakeScratch/TryCompile-DUymJj']
+        ignore line: [Building C object CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/run/current-system/sw/bin/cc   -v -o CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o -c /nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/bin/gcc]
+        ignore line: [Target: x86_64-unknown-linux-gnu]
+        ignore line: [Configured with: ../gcc-16.2.0/configure --prefix=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-16.2.0 --with-gmp-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-6.3.0-dev/include --with-gmp-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-6.3.0/lib --with-mpfr-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.2-dev/include --with-mpfr-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.2/lib --with-mpc=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libmpc-1.4.1 --with-native-system-header-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-glibc-2.44-25-dev/include --with-build-sysroot=/ --with-gxx-include-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-16.2.0/include/c++/16.2.0/ --program-prefix= --enable-lto --disable-libstdcxx-pch --without-included-gettext --with-system-zlib --enable-static --enable-languages=c c++ --disable-multilib --enable-plugin --disable-libcc1 --with-isl=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-isl-0.20 --disable-bootstrap --enable-default-pie --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=x86_64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 16.2.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fno-omit-frame-pointer' '-mno-omit-leaf-frame-pointer' '-mtls-dialect=gnu2' '-v' '-o' 'CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o' '-c' '-B' '/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/' '-idirafter' '/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include' '-idirafter' '/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed' '-B' '/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7e7f.dir/']
+        ignore line: [ /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/cc1 -quiet -v -idirafter /nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include -idirafter /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed /nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e7e7f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mno-omit-leaf-frame-pointer -mtls-dialect=gnu2 -mtune=generic -march=x86-64 -version -fno-omit-frame-pointer -o /tmp/ccbKMuoO.s]
+        ignore line: [GNU C23 (GCC) version 16.2.0 (x86_64-unknown-linux-gnu)]
+        ignore line: [	compiled by GNU C version 16.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.20-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/../../../../x86_64-unknown-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include"]
+        ignore line: [ignoring duplicate directory "/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include]
+        ignore line: [ /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/include]
+        ignore line: [ /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed]
+        ignore line: [ /nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 1fd89e2bd2926507b16c9ea06ee930e8]
+        ignore line: [COLLECT_GCC_OPTIONS='-fno-omit-frame-pointer' '-mno-omit-leaf-frame-pointer' '-mtls-dialect=gnu2' '-v' '-o' 'CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o' '-c' '-B' '/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/' '-idirafter' '/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include' '-idirafter' '/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed' '-B' '/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7e7f.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o /tmp/ccbKMuoO.s]
+        ignore line: [GNU assembler version 2.46 (x86_64-unknown-linux-gnu) using BFD version (GNU Binutils) 2.46]
+        ignore line: [COMPILER_PATH=/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/:/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/:/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-fno-omit-frame-pointer' '-mno-omit-leaf-frame-pointer' '-mtls-dialect=gnu2' '-v' '-o' 'CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o' '-c' '-B' '/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/' '-idirafter' '/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include' '-idirafter' '/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed' '-B' '/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_e7e7f]
+        ignore line: [/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7e7f.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/bin/gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/lto-wrapper]
+        ignore line: [Target: x86_64-unknown-linux-gnu]
+        ignore line: [Configured with: ../gcc-16.2.0/configure --prefix=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-16.2.0 --with-gmp-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-6.3.0-dev/include --with-gmp-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-6.3.0/lib --with-mpfr-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.2-dev/include --with-mpfr-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.2/lib --with-mpc=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libmpc-1.4.1 --with-native-system-header-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-glibc-2.44-25-dev/include --with-build-sysroot=/ --with-gxx-include-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-16.2.0/include/c++/16.2.0/ --program-prefix= --enable-lto --disable-libstdcxx-pch --without-included-gettext --with-system-zlib --enable-static --enable-languages=c c++ --disable-multilib --enable-plugin --disable-libcc1 --with-isl=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-isl-0.20 --disable-bootstrap --enable-default-pie --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=x86_64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 16.2.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/:/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/:/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/:/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-fno-omit-frame-pointer' '-mno-omit-leaf-frame-pointer' '-mtls-dialect=gnu2' '-v' '-o' 'cmTC_e7e7f' '-B' '/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/' '-idirafter' '/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include' '-idirafter' '/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/include-fixed' '-B' '/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib' '-L/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib' '-L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0' '-L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib' '-L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e7e7f.']
+        link line: [ /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/collect2 -plugin /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/liblto_plugin.so -plugin-opt=/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccG5q105.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --eh-frame-hdr -m elf_x86_64 -dynamic-linker /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e7e7f /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/Scrt1.o /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crti.o /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtbeginS.o -L/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0 -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0 -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/../../.. -dynamic-linker=/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtendS.o /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crtn.o]
+          arg [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccG5q105.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s_asneeded] ==> ignore
+          arg [-plugin-opt=-pass-through=-latomic_asneeded] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s_asneeded] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_e7e7f] ==> ignore
+          arg [/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/Scrt1.o] ==> obj [/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/Scrt1.o]
+          arg [/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crti.o] ==> obj [/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crti.o]
+          arg [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtbeginS.o] ==> obj [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtbeginS.o]
+          arg [-L/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib] ==> dir [/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib]
+          arg [-L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0] ==> dir [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0]
+          arg [-L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib] ==> dir [/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib]
+          arg [-L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib] ==> dir [/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib]
+          arg [-L/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib] ==> dir [/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib]
+          arg [-L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib] ==> dir [/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib]
+          arg [-L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0] ==> dir [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0]
+          arg [-L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/../../..] ==> dir [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/../../..]
+          arg [-dynamic-linker=/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/ld-linux-x86-64.so.2] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_s_asneeded] ==> lib [gcc_s_asneeded]
+          arg [-latomic_asneeded] ==> lib [atomic_asneeded]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_s_asneeded] ==> lib [gcc_s_asneeded]
+          arg [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtendS.o] ==> obj [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtendS.o]
+          arg [/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crtn.o] ==> obj [/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crtn.o]
+        ignore line: [collect2 version 16.2.0]
+        link line: [/nix/store/fy8mxgdjvjvmagv2igmj428a9j17hpcf-binutils-wrapper-2.46/bin/ld -plugin /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/liblto_plugin.so -plugin-opt=/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccG5q105.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --eh-frame-hdr -m elf_x86_64 -dynamic-linker /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e7e7f /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/Scrt1.o /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crti.o /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtbeginS.o -L/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0 -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0 -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/../../.. -dynamic-linker=/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtendS.o /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crtn.o] ==> linker [/nix/store/fy8mxgdjvjvmagv2igmj428a9j17hpcf-binutils-wrapper-2.46/bin/ld]
+        link line: [/nix/store/fy8mxgdjvjvmagv2igmj428a9j17hpcf-binutils-wrapper-2.46/bin/ld -plugin /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/liblto_plugin.so -plugin-opt=/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccG5q105.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --eh-frame-hdr -m elf_x86_64 -dynamic-linker /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e7e7f /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/Scrt1.o /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crti.o /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtbeginS.o -L/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0 -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0 -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/../../.. -dynamic-linker=/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtendS.o /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crtn.o] ==> linker architecture flags [-m;elf]
+        ignore line: [/nix/store/fy8mxgdjvjvmagv2igmj428a9j17hpcf-binutils-wrapper-2.46/bin/ld -plugin /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/liblto_plugin.so -plugin-opt=/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/libexec/gcc/x86_64-unknown-linux-gnu/16.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccG5q105.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --eh-frame-hdr -m elf_x86_64 -dynamic-linker /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e7e7f /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/Scrt1.o /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crti.o /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtbeginS.o -L/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0 -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib -L/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0 -L/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/../../.. -dynamic-linker=/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_e7e7f.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtendS.o /nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crtn.o]
+        linker tool for 'C': /nix/store/fy8mxgdjvjvmagv2igmj428a9j17hpcf-binutils-wrapper-2.46/bin/ld -m;elf
+        collapse library dir [/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib] ==> [/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib]
+        collapse library dir [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0] ==> [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0]
+        collapse library dir [/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib] ==> [/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib]
+        collapse library dir [/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib] ==> [/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib]
+        collapse library dir [/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib] ==> [/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib]
+        collapse library dir [/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib] ==> [/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib]
+        collapse library dir [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0] ==> [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0]
+        collapse library dir [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/../../..] ==> [/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib]
+        implicit libs: [gcc;gcc_s_asneeded;atomic_asneeded;c;gcc;gcc_s_asneeded]
+        implicit objs: [/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/Scrt1.o;/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crti.o;/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtbeginS.o;/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0/crtendS.o;/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib/crtn.o]
+        implicit dirs: [/nix/store/h4wfwic161kxrr74jlzla5lsm28hgary-glibc-2.44-25/lib;/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib/gcc/x86_64-unknown-linux-gnu/16.2.0;/nix/store/j7qx4s4mr17j1wqgvqdzj33lmrnzb387-gcc-16.2.0-lib/lib;/nix/store/5q6bdxkp7lc70gn9mnf4yiybrx8ry5xq-gcc-16.2.0/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/Internal/CMakeDetermineLinkerId.cmake:41 (message)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:337 (cmake_determine_linker_id)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Running the C compiler's linker: "/nix/store/fy8mxgdjvjvmagv2igmj428a9j17hpcf-binutils-wrapper-2.46/bin/ld" "-v"
+      GNU ld (GNU Binutils) 2.46
+  -
+    kind: "find-v1"
+    backtrace:
+      - "CMakeLists.txt:33 (find_path)"
+    mode: "path"
+    variable: "LIBVTERM_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "vterm.h"
+    candidate_directories:
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/run/current-system/sw/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/include/"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/"
+      - "/usr/local/include/"
+      - "/usr/local/"
+      - "/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include/"
+    searched_directories:
+      - "/run/wrappers/bin/vterm.h"
+      - "/home/sam/.nix-profile/bin/vterm.h"
+      - "/nix/profile/bin/vterm.h"
+      - "/home/sam/.local/state/nix/profile/bin/vterm.h"
+      - "/etc/profiles/per-user/sam/bin/vterm.h"
+      - "/nix/var/nix/profiles/default/bin/vterm.h"
+      - "/run/current-system/sw/bin/vterm.h"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/vterm.h"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/vterm.h"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/vterm.h"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/vterm.h"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/include/vterm.h"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/vterm.h"
+      - "/usr/local/include/vterm.h"
+      - "/usr/local/vterm.h"
+      - "/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include/vterm.h"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3"
+        - "/usr/local"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/nix/store/m38wglsqnh1mrmj2cmqa3pjb6w4yjxdi-glibc-2.44-25-dev/include"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "CMakeLists.txt:73 (find_program)"
+    mode: "program"
+    variable: "LIBTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "libtool"
+      - "glibtool"
+    candidate_directories:
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/run/current-system/sw/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/bin/"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/sbin/"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+    searched_directories:
+      - "/run/wrappers/bin/libtool"
+      - "/home/sam/.nix-profile/bin/libtool"
+      - "/nix/profile/bin/libtool"
+      - "/home/sam/.local/state/nix/profile/bin/libtool"
+      - "/etc/profiles/per-user/sam/bin/libtool"
+      - "/nix/var/nix/profiles/default/bin/libtool"
+    found: "/run/current-system/sw/bin/libtool"
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3"
+        - "/usr/local"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/FindGit.cmake:111 (find_program)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/ExternalProject/shared_internal_commands.cmake:930 (find_package)"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/share/cmake-4.4/Modules/ExternalProject.cmake:3283 (_ep_add_download_command)"
+      - "CMakeLists.txt:78 (ExternalProject_add)"
+    mode: "program"
+    variable: "GIT_EXECUTABLE"
+    description: "Git command line client"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "git"
+    candidate_directories:
+      - "/run/wrappers/bin/"
+      - "/home/sam/.nix-profile/bin/"
+      - "/nix/profile/bin/"
+      - "/home/sam/.local/state/nix/profile/bin/"
+      - "/etc/profiles/per-user/sam/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/run/current-system/sw/bin/"
+      - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin/"
+      - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin/"
+      - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin/"
+      - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin/"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/bin/"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/sbin/"
+      - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+    searched_directories:
+      - "/run/wrappers/bin/git"
+      - "/home/sam/.nix-profile/bin/git"
+      - "/nix/profile/bin/git"
+      - "/home/sam/.local/state/nix/profile/bin/git"
+      - "/etc/profiles/per-user/sam/bin/git"
+      - "/nix/var/nix/profiles/default/bin/git"
+    found: "/run/current-system/sw/bin/git"
+    search_context:
+      ENV{PATH}:
+        - "/run/wrappers/bin"
+        - "/home/sam/.nix-profile/bin"
+        - "/nix/profile/bin"
+        - "/home/sam/.local/state/nix/profile/bin"
+        - "/etc/profiles/per-user/sam/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/run/current-system/sw/bin"
+        - "/nix/store/0ypxg9c0zkky9ynazn179lkpp0ing8qd-kitty-0.49.2/bin"
+        - "/nix/store/s13s3r3pi67vj27s6ca7pbrxs2z4zjf6-imagemagick-7.1.2-31/bin"
+        - "/nix/store/dgvn2c174c1fy0lcfyx0hzq76qn6jmnn-ncurses-6.6-dev/bin"
+        - "/nix/store/52b9d5cnblbvsm3d92gmgp1syma3nijy-shader-slang-2026.18/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/nix/store/jcvvpih1046akxcwh9hdiak5q24jqcf0-cmake-4.4.3"
+        - "/usr/local"
+...
