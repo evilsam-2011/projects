@@ -1,0 +1,324 @@
+#+TITLE: i3 configuration
+#+PROPERTY: header-args :tangle config
+
+Literate source for =~/.config/i3/config=. Edit the =conf= blocks below, then tangle with =C-c C-v C-t= (or =M-x org-babel-tangle=). Never edit the generated =config= directly.
+
+* Variables
+** variables set for workspace and mod key
++ mod key is like the main key that is used in a wm my mod key is the windows key also called Mod3
++ workspaces are defined from 1 to 10
+
+#+BEGIN_SRC conf
+set $mod Mod3
+set $refresh_i3status killall -SIGUSR1 i3status
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+#+END_SRC
+
+* Workspaces
+** specific apps open in specific workspace
++ *qutebrowser* in the first workspace
++ nothing is assigned from second workspace but is mainly for the terminal and second workspace is *tabbed*
+
+#+BEGIN_SRC conf
+focus_on_window_activation focus
+for_window [workspace="^2$"] layout tabbed
+
+assign [class="qutebrowser"] $ws1
+assign [class="Thunar"] $ws3
+assign [class="Nemo"] $ws3
+assign [class="yazi"] $ws3
+assign [class="rmpc"] $ws4
+assign [class="mpv"] $ws5
+#+END_SRC
+
+* Keybindings
+** Media keys
+
+#+BEGIN_SRC conf
+# Use pactl to adjust volume in PulseAudio.
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && ~/.config/i3/scripts/osd-volume.sh
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && ~/.config/i3/scripts/osd-volume.sh
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && ~/.config/i3/scripts/osd-volume.sh
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+#+END_SRC
+
+** Launchers
+*** Rofi
++ mod + p for my *projects script*
++ mod + c for my *clipboared history*
++ mod + space for my *app launcher*
+*** Notification
++ mod + prtsc for a selected area *screen shot*
+#+BEGIN_SRC conf
+bindsym $mod+p exec --no-startup-id ~/.config/i3/scripts/tx.sh
+bindsym $mod+c exec --no-startup-id ~/.config/i3/scripts/clipboard.sh
+bindsym $mod+space exec ~/.config/rofi/launchers/type-2/launcher.sh
+
+#Screenshot
+# Screenshot selected region to clipboard
+bindsym Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
+#+END_SRC
+
+** Apps
++ mod + enter launches the terminal (kitty)
++ mod + b launcher the browser (qutebrowser)
++ mod + m for music player (rmpc)
++ mod + d for emacs
++ alt  + e for wallpaper menu (waypaper)
+*** file manager
++ mod + t for thunar
++ mod + y for yazi (terminal file manager)
+
+#+BEGIN_SRC conf
+bindsym $mod+Return exec kitty
+bindsym $mod+b exec qutebrowser
+bindsym $mod+t exec thunar
+bindsym $mod+m exec kitty --class="rmpc" rmpc
+bindsym $mod+y exec kitty --class="yazi" yazi
+bindsym mod1+E exec --no-startup-id waypaper
+bindsym $mod+d exec --no-startup-id emacs
+#+END_SRC
+
+** Mouse and window management
++ mod + q to close a application
+*** mouse
++ mod + left key to move a window
+#+BEGIN_SRC conf
+floating_modifier $mod
+tiling_drag modifier titlebar
+bindsym $mod+q kill
+#+END_SRC
+
+** Focus and move (vim-style)
+*** change focus
++ mod + h to focus left
++ mod + j to focus down
++ mod + k to focus up
++ mod + l to focus right
+*** move a window
++ mod + shift + h to move window left
++ mod + shift + j to move window down
++ mod + shift + k to move window up
++ mod + shift + l to move window right
+
+#+BEGIN_SRC conf
+# change focus (vim-style hjkl)
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window (vim-style hjkl)
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+#+END_SRC
+
+** Layout
+*** main layouts
++ stacked
++ tabbed
++ toggle split (normal)
++ fullscren
+*** binds
++ mod + s for stacked
++ mod + w for tabbed
++ mod + e for toggle split (normal)
++ mod + f for fullscreen
+
+#+BEGIN_SRC conf
+bindsym $mod+Ctrl+h split h
+bindsym $mod+Shift+v split v
+
+bindsym $mod+f fullscreen toggle
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+v floating toggle
+bindsym $mod+Tab focus mode_toggle
+bindsym $mod+a focus parent
+#+END_SRC
+
+** Workspace switching
+*** switch to workspace
++ mod + (1/2/3/4/5/6/7/8/9/0) to switch from workspace (1 to 10)
+*** move window to workspace
++ mod + shift + (1/2/3/4/5/6/7/8/9/0) to move window from current workspace to workspace from  (1 to 10)
+*** move window to workspace
+#+BEGIN_SRC conf
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1; workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2; workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3; workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4; workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5; workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6; workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7; workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8; workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9; workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10; workspace number $ws10
+#+END_SRC
+
+** i3 session controls
+*** reload ,restart and exit
++ mod + shift + c to reload
++ mod + shift + r to restart
++ mod + shift + e to exit
+
+#+BEGIN_SRC conf
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+#+END_SRC
+
+* Modes
+** resize
+*** mode for resizing windows using h j k l
++ Pressing h will shrink the window’s width.
++ Pressing l will grow the window’s width.
++ Pressing k will shrink the window’s height.
++ Pressing j will grow the window’s height.
+
+#+BEGIN_SRC conf
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+#+END_SRC
+
+** Music
+*** mode for chaning track and changing volume using hjkl
++ j to decrease volume by 5
++ k to increase volume by 5
++ h to go to the previous track
++ l to go to the next track
+
+#+BEGIN_SRC conf
+mode "music" {
+    bindsym j exec mpc volume -5
+    bindsym k exec mpc volume +5
+    bindsym l exec mpc next
+    bindsym h exec mpc prev
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym mod1+m mode "default"
+}
+bindsym $mod+r mode "resize"
+bindsym mod1+m mode "music"
+#+END_SRC
+* Autostart
++ waypaper --restore to restore my previous wallpaper at startup
++ autotile to automatically tile my windows insted of manually
++ rsetxkbmap -option "caps:super" to remap my caps to super
++ dunst to show notifications(notifiaction service)
++ clipmenud for my clipboared menu
++ i3 blocks for my status bar
++ xrandr --output HDMI-1 --same-as eDP-1 to mirror my screen to my tv
+
+#+BEGIN_SRC conf
+exec_always --no-startup-id waypaper --restore &
+exec_always --no-startup-id autotiling
+exec --always xmodmap ~/.Xmodmap
+exec_always --no-startup-id dunst
+exec_always --no-startup-id clipmenud
+exec_always --no-startup-id killall i3blocks; i3blocks -c ~/.config/i3blocks/i3blocks.conf &
+
+exec --no-startup-id xrandr --output HDMI-1 --same-as eDP-1
+#+END_SRC
+
+* Appearance
+
+#+BEGIN_SRC conf
+# class                 border  backgr. text    indicator child_border
+client.focused          #51afef #282c34 #bbc2cf #5b6268   #51afef
+client.focused_inactive #3f444a #21242b #9ca0a4 #3f444a   #282c34
+client.unfocused        #282c34 #21242b #5b6268 #3f444a   #21242b
+client.urgent           #ff6c6b #3f444a #bbc2cf #ff6c6b   #3f444a
+client.placeholder      #282c34 #21242b #5b6268 #282c34   #21242b
+
+client.background       #282c34
+
+default_border pixel 3
+default_floating_border pixel 3
+for_window [class="^.*"] border pixel 3
+
+for_window [all] title_window_icon on
+
+for_window [class="Waypaper"] floating enable
+for_window [class="imv"] floating enable
+
+font pango:JetBrainsMono Nerd Font Mono 10
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id nm-applet
+#+END_SRC
+
+* Bar
+
+#+BEGIN_SRC conf
+bar {
+    status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
+    position bottom
+    font pango:JetBrainsMono Nerd Font Mono 10
+    colors {
+        background #282c34
+        statusline #bbc2cf
+        separator #3f444a
+        focused_workspace #282c34 #51afef #282c34
+        active_workspace #282c34 #5b6268 #282c34
+        inactive_workspace #282c34 #21242b #5b6268
+        urgent_workspace #282c34 #ff6c6b #282c34
+    }
+}
+#+END_SRC

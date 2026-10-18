@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spectre — AI HQ</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon">✦</span>
+                    <h1>Spectre</h1>
+                </div>
+                <span class="status-badge" id="statusBadge">
+                    <span class="status-dot"></span>
+                    <span id="statusText">Checking...</span>
+                </span>
+            </div>
+
+            <div class="sidebar-nav">
+                <button class="nav-item active" id="chatTab" data-tab="chat">
+                    <span class="nav-icon">💬</span>
+                    <span>Chat</span>
+                </button>
+                <button class="nav-item" id="todosTab" data-tab="todos">
+                    <span class="nav-icon">📋</span>
+                    <span>Todos</span>
+                </button>
+                <button class="nav-item" id="officeTab" data-tab="office">
+                    <span class="nav-icon">🏢</span>
+                    <span>Office</span>
+                </button>
+                <button class="nav-item" id="settingsTab" data-tab="settings">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Settings</span>
+                </button>
+            </div>
+
+            <!-- Conversation List -->
+            <div class="conversation-list">
+                <div class="conversation-list-header">Conversations</div>
+                <div class="conversation-items" id="conversationItems">
+                    <!-- Dynamically loaded -->
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="token-usage" id="tokenUsage">
+                    <span>💬 Chatting with <strong id="sidebarEmployeeName">Harry</strong> <span id="sidebarEmployeeEmoji">👻</span></span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Chat Panel -->
+            <div class="panel active" id="chatPanel">
+                <div class="chat-header">
+                    <div class="chat-header-left">
+                        <div class="employee-selector" id="employeeSelector">
+                            <button class="emp-select-btn active" data-employee="harry" title="Chat with Harry (Manager)">
+                                <span class="emp-select-avatar" style="background:#ff69b4">👻</span>
+                                <span class="emp-select-name">Harry</span>
+                                <span class="emp-select-role">Manager</span>
+                            </button>
+                            <button class="emp-select-btn" data-employee="penny" title="Chat with Penny (P.A.)">
+                                <span class="emp-select-avatar" style="background:#20c997">🤖</span>
+                                <span class="emp-select-name">Penny</span>
+                                <span class="emp-select-role">P.A.</span>
+                            </button>
+                            <button class="emp-select-btn" data-employee="coder" title="Chat with David (Coder)">
+                                <span class="emp-select-avatar" style="background:#845ef7">💻</span>
+                                <span class="emp-select-name">David</span>
+                                <span class="emp-select-role">Coder</span>
+                            </button>
+                            <button class="emp-select-btn" data-employee="group" title="Group Chat — talk to everyone">
+                                <span class="emp-select-avatar" style="background:linear-gradient(135deg,#ff69b4,#845ef7,#20c997)">💬</span>
+                                <span class="emp-select-name">Group</span>
+                                <span class="emp-select-role">All Hands</span>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="btn-icon" id="newChatBtn" title="New chat">
+                        <span>+</span>
+                    </button>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message welcome" id="welcomeMessage">
+                        <div class="message-avatar harry-avatar" id="welcomeAvatar">👻</div>
+                        <div class="message-content" id="welcomeContent">
+                            <p>Boo! 👋 Welcome, CEO! I'm <strong>Harry</strong>, your ghostly manager. How can I help you run the company today?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-container">
+                    <div class="chat-input-wrapper">
+                        <textarea
+                            id="chatInput"
+                            class="chat-input"
+                            placeholder="Message Harry..."
+                            rows="1"
+                            autofocus
+                        ></textarea>
+                        <button class="btn-send" id="sendBtn" disabled title="Send message">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="input-footer">
+                        <span class="hint">Press Enter to send</span>
+                        <span class="typing-indicator" id="typingIndicator">Thinking...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Todos Panel -->
+            <div class="panel" id="todosPanel">
+                <div class="settings-header">
+                    <h2>📋 To-Do List</h2>
+                </div>
+                <div class="todos-body">
+                    <div class="todos-input-row">
+                        <input type="text" id="todoInput" class="todo-input" placeholder="Add a new task..." />
+                        <button class="btn-primary" id="addTodoBtn">Add</button>
+                    </div>
+                    <div class="todos-filter-row">
+                        <button class="todo-filter-btn active" data-filter="all">All</button>
+                        <button class="todo-filter-btn" data-filter="active">Active</button>
+                        <button class="todo-filter-btn" data-filter="completed">Completed</button>
+                    </div>
+                    <div class="todos-list" id="todosList">
+                        <div style="text-align: center; padding: 32px; color: var(--text-muted); font-size: 14px;">
+                            <div style="font-size: 32px; margin-bottom: 8px;">📋</div>
+                            Loading your tasks...
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Office Panel -->
+            <div class="panel" id="officePanel">
+                <div class="office-header">
+                    <h2>🏢 Virtual Company HQ</h2>
+                    <div class="office-ceo-badge">
+                        <span class="ceo-crown">👑</span>
+                        <span>CEO: <strong>You</strong></span>
+                    </div>
+                </div>
+
+                <div class="office-building-container">
+                    <!-- Building Cross-Section -->
+                    <div class="office-building" id="officeBuilding">
+                        <!-- Top: CEO Room -->
+                        <div class="floor ceo-floor">
+                            <div class="floor-label">Penthouse — CEO</div>
+                            <div class="room ceo-room">
+                                <div class="room-icon">👑</div>
+                                <div class="room-label">CEO Office</div>
+                                <div class="room-occupant">You</div>
+                            </div>
+                        </div>
+
+                        <!-- Floor 2: Harry + Penny side by side -->
+                        <div class="floor split-floor" id="floor2">
+                            <div class="floor-label">Floor 2 — Management &amp; Operations</div>
+                            <div class="split-room">
+                                <div class="split-left harry-room">
+                                    <div class="ghost-container" id="ghostContainer">
+                                        <div class="ghost" id="ghostHarry">
+                                            <div class="ghost-body">
+                                                <div class="ghost-eye left"></div>
+                                                <div class="ghost-eye right"></div>
+                                                <div class="ghost-mouth"></div>
+                                            </div>
+                                            <div class="ghost-bottom">
+                                                <span class="ghost-wave"></span>
+                                                <span class="ghost-wave"></span>
+                                                <span class="ghost-wave"></span>
+                                                <span class="ghost-wave"></span>
+                                            </div>
+                                        </div>
+                                        <div class="ghost-name">Harry</div>
+                                        <div class="ghost-role">Manager &amp; Head of Operations</div>
+                                    </div>
+                                    <div class="left-badge">Groq · Llama 3.3 70B</div>
+                                </div>
+                                <div class="split-divider"></div>
+                                <div class="split-right penny-room">
+                                    <div class="ghost-container penny-ghost-container" id="pennyGhostContainer">
+                                        <div class="ghost penny-ghost" id="ghostPenny">
+                                            <div class="ghost-body">
+                                                <div class="ghost-eye left"></div>
+                                                <div class="ghost-eye right"></div>
+                                                <div class="ghost-mouth"></div>
+                                            </div>
+                                            <div class="ghost-bottom">
+                                                <span class="ghost-wave"></span>
+                                                <span class="ghost-wave"></span>
+                                                <span class="ghost-wave"></span>
+                                                <span class="ghost-wave"></span>
+                                            </div>
+                                        </div>
+                                        <div class="ghost-name penny-name">Penny</div>
+                                        <div class="ghost-role">Personal Assistant (P.A.)</div>
+                                    </div>
+                                    <div class="right-badge">Mistral AI · Large</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floor 1: David's Engineering Floor -->
+                        <div class="floor david-floor" id="davidFloor">
+                            <div class="floor-label">Floor 1 — Engineering</div>
+                            <div class="room david-full-room">
+                                <div class="david-container" id="davidContainer">
+                                    <div class="david-icon">💻</div>
+                                    <div class="david-name">David</div>
+                                    <div class="david-role">Senior Software Engineer</div>
+                                </div>
+                                <div class="david-badge">OpenRouter · Qwen3 Coder 480B</div>
+                            </div>
+                        </div>
+
+                        <!-- Ground Floor: Team -->
+                        <div class="floor employees-floor last-floor" id="employeesFloor">
+                            <div class="floor-label">Ground Floor — Team</div>
+                            <div class="room employees-room" id="employeesRoom">
+                                <div class="employees-empty" id="employeesEmpty">
+                                    <span class="empty-icon">👥</span>
+                                    <span>No team members yet. Add employees below!</span>
+                                </div>
+                                <div class="employees-grid" id="employeesGrid"></div>
+                            </div>
+                        </div>
+
+                        <!-- Building ground -->
+                        <div class="building-ground"></div>
+                    </div>
+                </div>
+
+                <!-- Employee Management -->
+                <div class="office-employees-panel">
+                    <div class="office-section-title">
+                        <h3>Team Members</h3>
+                        <button class="btn-add-employee" id="btnAddEmployee">+ Add Employee</button>
+                    </div>
+                    <div class="add-employee-form" id="addEmployeeForm" style="display: none;">
+                        <input type="text" id="empNameInput" class="office-input" placeholder="Name (e.g. Alice)" />
+                        <input type="text" id="empRoleInput" class="office-input" placeholder="Role (e.g. Engineer)" />
+                        <select id="empModelInput" class="office-select">
+                            <option value="llama-3.3-70b-versatile">Llama 3.3 70B</option>
+                            <option value="mixtral-8x7b-32768">Mixtral 8x7B</option>
+                            <option value="llama3-8b-8192">Llama 3 8B (Fast)</option>
+                            <option value="gemma2-9b-it">Gemma 2 9B</option>
+                            <option value="nvidia/nemotron-3-super-120b-a12b:free">Nemotron 3 Super 120B (Free / OpenRouter)</option>
+                        </select>
+                        <div class="form-actions">
+                            <button class="btn-secondary" id="cancelAddEmployee">Cancel</button>
+                            <button class="btn-primary" id="confirmAddEmployee">Hire!</button>
+                        </div>
+                    </div>
+                    <div class="employees-list" id="employeesList"></div>
+                </div>
+            </div>
+
+            <!-- Settings Panel -->
+            <div class="panel" id="settingsPanel">
+                <div class="settings-header">
+                    <h2>Settings</h2>
+                </div>
+                <div class="settings-body">
+                    <div class="settings-section">
+                        <h3>API Configuration</h3>
+                        <div class="setting-item">
+                            <label for="apiKeyInput">Groq API Key</label>
+                            <div class="input-group">
+                                <input
+                                    type="password"
+                                    id="apiKeyInput"
+                                    class="setting-input"
+                                    placeholder="gsk_..."
+                                />
+                                <button class="btn-secondary" id="saveApiKeyBtn">Save</button>
+                            </div>
+                            <p class="setting-hint">
+                                Get your key at
+                                <a href="https://console.groq.com" target="_blank" rel="noopener">console.groq.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="settings-section">
+                        <h3>Chat Settings</h3>
+                        <div class="setting-item">
+                            <label for="temperatureSlider">Temperature: <span id="tempValue">0.7</span></label>
+                            <input
+                                type="range"
+                                id="temperatureSlider"
+                                class="setting-slider"
+                                min="0"
+                                max="2"
+                                step="0.1"
+                                value="0.7"
+                            />
+                            <div class="slider-labels">
+                                <span>Precise</span>
+                                <span>Creative</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings-section">
+                        <h3>Soul — Personality</h3>
+                        <div class="setting-item">
+                            <label for="systemPromptInput">Spectre's character (soul.md)</label>
+                            <textarea
+                                id="systemPromptInput"
+                                class="setting-textarea"
+                                rows="8"
+                            ></textarea>
+                            <p class="setting-hint">
+                                Edit <strong>soul.md</strong> — this defines Spectre's entire personality.
+                            </p>
+                            <div style="margin-top: 8px;">
+                                <button class="btn-secondary" id="saveSystemPromptBtn">Save to soul.md</button>
+                                <span id="systemPromptStatus" class="save-status"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings-section">
+                        <h3>Memory — Long-Term</h3>
+                        <div class="setting-item">
+                            <label for="memoryInput">What Spectre remembers (memory.md)</label>
+                            <textarea
+                                id="memoryInput"
+                                class="setting-textarea"
+                                rows="6"
+                            ></textarea>
+                            <p class="setting-hint">
+                                Spectre reads this before every conversation. He can also write to it.
+                            </p>
+                            <div style="margin-top: 8px;">
+                                <button class="btn-secondary" id="saveMemoryBtn">Save to memory.md</button>
+                                <span id="memoryStatus" class="save-status"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings-section">
+                        <h3>🔗 Google Services</h3>
+                        <div class="setting-item">
+                            <label>Google Calendar &amp; Gmail</label>
+                            <div id="googleStatus" style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                                <span id="googleStatusText" style="font-size: 13px; color: var(--text-muted);">Checking...</span>
+                                <button class="btn-secondary" id="connectGoogleBtn" style="display: none;">
+                                    🔑 Connect Google Account
+                                </button>
+                                <button class="btn-secondary" id="disconnectGoogleBtn" style="display: none; color: var(--danger); border-color: rgba(239, 68, 68, 0.3);">
+                                    🔌 Disconnect
+                                </button>
+                            </div>
+                            <p class="setting-hint" style="margin-top: 8px;">
+                                Grant Penny access to your Google Calendar and Gmail so she can manage your schedule and emails.
+                                You'll need a Google Cloud project with the Calendar &amp; Gmail APIs enabled.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="settings-section">
+                        <h3>About</h3>
+                        <div class="about-info">
+                            <p><strong>Spectre HQ</strong> v2.0 — Virtual company cockpit powered by Groq Cloud.</p>
+                            <p>Built with FastAPI · Google APIs · Groq Python SDK · SQLite</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/js/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+/* style.css — Dynamic Island styling (loaded by island.py).
+   island.py injects an @font-face rule for "IslandFont" pointing at a font
+   found in ~/Downloads; this file falls back to system fonts if absent. */
+
+window.island-window {
+    background-color: transparent;
+}
+
+.island {
+    font-family: "IslandFont", "JetBrains Mono", "Fira Code", monospace;
+
+    background-color: rgba(10, 10, 12, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+
+    transition: background-color 200ms ease-out,
+                border-color 200ms ease-out;
+}
+
+.island.expanded {
+    border-radius: 24px;
+}
+
+.island-dot {
+    color: #ffb688;
+    font-size: 8px;
+}
+
+.clock-compact {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.clock-big {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.date-label {
+    color: #9aa0a6;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.media-label {
+    color: #6b7280;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.separator {
+    background-color: rgba(255, 255, 255, 0.08);
+    min-height: 1px;
+}
+
+.cpu-caption {
+    color: #9aa0a6;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.cpu-value {
+    color: #ffb688;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.island-cpu trough {
+    background-color: rgba(255, 255, 255, 0.10);
+    border-radius: 3px;
+    min-height: 6px;
+}
+
+.island-cpu progress {
+    background-color: #ffb688;
+    border-radius: 3px;
+    min-height: 6px;
+}

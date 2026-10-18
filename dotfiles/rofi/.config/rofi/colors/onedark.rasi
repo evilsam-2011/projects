@@ -1,0 +1,13 @@
+/**
+ * doom-one Color Scheme (alias for onedark import paths)
+ * Matches Emacs doom-one
+ **/
+
+* {
+    background:     #282c34FF;
+    background-alt: #21242bFF;
+    foreground:     #bbc2cfFF;
+    selected:       #51afefFF;
+    active:         #5b6268FF;
+    urgent:         #ff6c6bFF;
+}

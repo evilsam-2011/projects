@@ -1,0 +1,114 @@
+#+TITLE: Doom Emacs configuration
+#+PROPERTY: header-args :tangle config.el
+
+Literate source for =~/.config/doom/config.el=. Edit the =emacs-lisp= block below, then tangle with =C-c C-v C-t= (or =M-x org-babel-tangle=). Never edit the generated =config.el= directly.
+
+#+BEGIN_SRC emacs-lisp
+;; Use bash for internal subprocesses (login shell is fish).
+(setq shell-file-name (executable-find "bash"))
+#+END_SRC
+* ui
+** font
++ font is Jetbrains Mono and size of the font is 18
++ oprn sans is font for notes and is of size 18
+** Theme
++ theme is set to doom-one and i use the same theme fort my entire setup
++ uses relative numbers so it shows that how far is line from the current line insted of the line number
+
+#+BEGIN_SRC emacs-lisp
+(setq doom-font (font-spec :family "JetBrains Mono" :size 18)
+      doom-variable-pitch-font (font-spec :family "Open Sans" :size 18))
+(setq doom-theme 'doom-one)
+(setq display-line-numbers-type 'relative)
+#+END_SRC
+
+* org mode
+** what is org mode
++ org mode is like a note taking setup insted of emacs org mode can be said like a note taking app and emacs as a os that opens it
++  org mode contains more things in it like *org-agenda* and *org-roam*
+*** org-agenda
++ org-agenda for me is a life mangement tool where i can add todos schedule things and plan this it is mainly for organising your life
+*** org-roam
++ org roam is something like obsidian and allows you to gave a graph like in obsidan in org mode, doom emacs
+** directorys
++ *~/Documents/Notes/* is the main folder for org mode and org-roam (same path)
++ *~/Documents/Note/journal/* is the folder for daily journal
++ no separate =roam/= subfolder — roam lives at the org root so there is one tree to navigate
+
+#+BEGIN_SRC emacs-lisp
+;;; Org base directory (set before org loads)
+(setq org-directory (expand-file-name "~/Documents/Notes/"))
+
+;;; Org-Roam — same folder as org-directory (flat layout)
+(setq org-roam-directory org-directory
+      org-roam-dailies-directory "journal")
+
+(setq org-agenda-files '("~/Documents/Notes/TODO.org"))
+
+
+;; Create dirs if missing
+(dolist (dir (list org-directory
+                   org-roam-directory
+                   (expand-file-name org-roam-dailies-directory org-roam-directory)))
+  (unless (file-directory-p dir)
+    (make-directory dir t)))
+
+(after! org-roam
+  ;; Daily: no body template — just create file with title and open immediately
+  (setq org-roam-dailies-capture-templates
+        '(("d" "daily" plain ""
+           :target (file+head "%<%Y-%m-%d>.org" "#+title: %<%Y-%m-%d>\n")
+           :unnarrowed t
+           :immediate-finish t)))
+
+  ;; Atomic note: blank file, just the title header
+  (setq org-roam-capture-templates
+        '(("n" "note" plain "%?"
+           :target (file+head "notes/${slug}.org" "#+title: ${title}\n")
+           :unnarrowed t))))
+
+;;; Org-Roam UI (knowledge graph in browser)
+(use-package! org-roam-ui
+  :after org-roam
+  :config
+  (setq org-roam-ui-sync-theme t
+        org-roam-ui-follow t
+        org-roam-ui-update-on-save t))
+
+;;; Mixed pitch (variable font for prose, monospace for code/tables)
+(use-package! mixed-pitch
+  :hook (org-mode . mixed-pitch-mode))
+
+;;; Open org-roam notes fullscreen (not in a bottom popup)
+(after! org-roam
+  (set-popup-rules!
+    '(("^CAPTURE-.*\\.org$" :ignore t)   ; daily / note capture buffers
+      ("\\*org-roam\\*"     :ignore t)))) ; org-roam sidebar
+
+;;; Hide *bold*/_italic_ markers (shown only when cursor is on them)
+(setq org-hide-emphasis-markers t)
+
+;;; Pretty heading bullets (org-superstar)
+(use-package! org-superstar
+  :hook (org-mode . org-superstar-mode)
+  :config
+  (setq org-superstar-remove-leading-stars t
+        org-superstar-headline-bullets-list '("◉" "○" "●" "○" "✸" "✿")))
+#+END_SRC
+* Org Roam keybinds
+** space + n openes stands for notes
+** space + n + d opens todays daily note
+** space + n + f fuzzy search for notes
+** space + n + i fuzzy finder to insert notes
+** space + n + g opens graph view in browser
+
+#+BEGIN_SRC emacs-lisp
+;;; Keybindings — all under SPC n
+(map! :leader
+      (:prefix ("n" . "notes")
+       :desc "Open today's daily"  "d" #'org-roam-dailies-goto-today
+       :desc "Find or create note" "f" #'org-roam-node-find
+       :desc "Insert link"         "i" #'org-roam-node-insert
+       :desc "Open graph"          "g" #'org-roam-ui-open))
+
+#+END_SRC

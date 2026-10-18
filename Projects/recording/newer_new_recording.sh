@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Automatically generate a unique filename with a timestamp
+OUTPUT="recording_$(date +%Y%m%d_%H%M%S).mp4"
+
+ffmpeg \
+  -f x11grab -framerate 30 -video_size 1366x768 -i :0.0 \
+  -f pulse -i default \
+  -c:v libx264 -preset ultrafast -crf 10 -pix_fmt yuv444p \
+  -c:a aac -b:a 192k \
+  "$OUTPUT"

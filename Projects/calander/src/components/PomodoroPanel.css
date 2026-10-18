@@ -1,0 +1,452 @@
+.pomo-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 40px;
+  overflow: hidden;
+  min-height: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.pomo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.pomo-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-h);
+  letter-spacing: -0.02em;
+}
+
+.pomo-sessions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 14px;
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  backdrop-filter: blur(var(--glass-blur-sm));
+  -webkit-backdrop-filter: blur(var(--glass-blur-sm));
+  border: 1px solid var(--border);
+  color: var(--amber);
+}
+
+.pomo-session-count {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.pomo-session-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-dim);
+}
+
+.pomo-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Mode row — tabs + duration pills */
+.pomo-mode-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pomo-mode-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--bg-surface);
+  backdrop-filter: blur(var(--glass-blur-sm));
+  -webkit-backdrop-filter: blur(var(--glass-blur-sm));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 4px;
+}
+
+.pomo-mode-tab {
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all var(--transition);
+}
+
+.pomo-mode-tab.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.pomo-mode-tab:not(.active):hover {
+  color: var(--text-h);
+}
+
+/* Duration presets */
+.pomo-duration-pills {
+  display: flex;
+  gap: 4px;
+  background: var(--bg-surface);
+  backdrop-filter: blur(var(--glass-blur-sm));
+  -webkit-backdrop-filter: blur(var(--glass-blur-sm));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 3px;
+}
+
+.pomo-duration-pill {
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all var(--transition);
+  letter-spacing: 0.2px;
+}
+
+.pomo-duration-pill:hover {
+  color: var(--text);
+}
+
+.pomo-duration-pill.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Session dots */
+.pomo-dots-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.pomo-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: all 0.3s ease;
+}
+
+.pomo-dot.done {
+  background: var(--accent);
+  box-shadow: 0 0 4px var(--accent);
+  animation: dotPop 0.3s ease;
+}
+
+@keyframes dotPop {
+  0% { transform: scale(0); }
+  60% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* Timer */
+.pomo-timer {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease;
+}
+
+.pomo-timer.celebrating {
+  animation: timerCelebrate 0.8s ease;
+}
+
+@keyframes timerCelebrate {
+  0% { transform: scale(1); }
+  15% { transform: scale(1.08); }
+  30% { transform: scale(0.95); }
+  50% { transform: scale(1.04); }
+  70% { transform: scale(0.98); }
+  100% { transform: scale(1); }
+}
+
+/* Aura ring — pulsing glow behind timer */
+.pomo-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.pomo-aura circle {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pomo-ring-fill.running ~ .pomo-aura circle,
+.pomo-timer:has(.pomo-ring-fill.running) .pomo-aura circle {
+  opacity: 0.15;
+  animation: auraPulse 2s ease-in-out infinite;
+}
+
+@keyframes auraPulse {
+  0%, 100% { transform: scale(1); opacity: 0.1; }
+  50% { transform: scale(1.03); opacity: 0.2; }
+}
+
+/* Main ring */
+.pomo-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.pomo-ring-bg {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 6;
+}
+
+.pomo-ring-fill {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.25s linear, stroke 0.4s ease;
+}
+
+.pomo-ring-fill.running {
+  filter: drop-shadow(0 0 6px var(--accent));
+  animation: ringGlow 2s ease-in-out infinite;
+}
+
+.pomo-ring-fill.running.celebrate {
+  animation: ringBurst 0.6s ease;
+  filter: drop-shadow(0 0 12px var(--accent));
+}
+
+@keyframes ringGlow {
+  0%, 100% { filter: drop-shadow(0 0 4px currentColor); }
+  50% { filter: drop-shadow(0 0 10px currentColor); }
+}
+
+@keyframes ringBurst {
+  0% { transform: rotate(-90deg) scale(1); stroke-width: 6; }
+  50% { transform: rotate(-90deg) scale(1.06); stroke-width: 8; }
+  100% { transform: rotate(-90deg) scale(1); stroke-width: 6; }
+}
+
+/* Countdown overlay */
+.pomo-countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  z-index: 2;
+  animation: countIn 0.3s ease;
+}
+
+@keyframes countIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.pomo-countdown-num {
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.pomo-countdown-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Time display */
+.pomo-time {
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--text-h);
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+  z-index: 2;
+  transition: color 0.4s ease;
+}
+
+/* Focus tip */
+.pomo-tip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-dim);
+  height: 20px;
+}
+
+.pomo-tip svg {
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+
+.pomo-tip-text {
+  font-size: 13px;
+  font-weight: 500;
+  animation: tipSlide 0.4s ease;
+  white-space: nowrap;
+}
+
+@keyframes tipSlide {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Controls */
+.pomo-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.pomo-btn {
+  padding: 12px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity var(--transition);
+}
+
+.pomo-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.pomo-btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.pomo-btn-primary:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.pomo-btn-secondary {
+  background: var(--bg-elevated);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.pomo-btn-secondary:hover {
+  background: var(--bg-hover);
+  color: var(--text-h);
+}
+
+/* Task selector */
+.pomo-task-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.pomo-task-label {
+  font-size: 12px;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.pomo-task-select-input {
+  width: 100%;
+  padding: 9px 12px;
+  font-size: 13px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-h);
+  outline: none;
+  font-family: inherit;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.pomo-task-select-input:focus {
+  border-color: var(--accent-border);
+}
+
+.pomo-task-select-input option {
+  background: var(--bg-surface);
+  color: var(--text);
+}
+
+/* Linked task display */
+.pomo-linked-task {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: var(--accent-bg);
+  backdrop-filter: blur(var(--glass-blur-sm));
+  -webkit-backdrop-filter: blur(var(--glass-blur-sm));
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-sm);
+  max-width: 360px;
+  width: 100%;
+}
+
+.pomo-linked-label {
+  font-size: 11px;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.pomo-linked-name {
+  font-size: 13px;
+  color: var(--text-h);
+  font-weight: 600;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pomo-linked-count {
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 600;
+  white-space: nowrap;
+}

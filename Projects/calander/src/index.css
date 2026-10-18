@@ -1,0 +1,145 @@
+:root,
+[data-theme="dark"] {
+  --bg: #0a0a0e;
+  --bg-surface: rgba(18, 18, 26, 0.6);
+  --bg-elevated: rgba(26, 26, 36, 0.5);
+  --bg-hover: rgba(255, 255, 255, 0.05);
+  --text: #a1a1aa;
+  --text-h: #f4f4f5;
+  --text-dim: #6b6b80;
+  --border: rgba(255, 255, 255, 0.06);
+  --border-light: rgba(255, 255, 255, 0.1);
+  --green: #22c55e;
+  --green-bg: rgba(34, 197, 94, 0.12);
+  --amber: #f59e0b;
+  --amber-bg: rgba(245, 158, 11, 0.12);
+  --red: #ef4444;
+  --red-bg: rgba(239, 68, 68, 0.12);
+  --radius: 10px;
+  --radius-sm: 7px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25);
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.35);
+  --glass-blur: 24px;
+  --glass-blur-sm: 12px;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+  --transition: 0.2s ease;
+
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg: #edece7;
+  --bg-surface: rgba(255, 255, 255, 0.65);
+  --bg-elevated: rgba(245, 245, 240, 0.5);
+  --bg-hover: rgba(0, 0, 0, 0.04);
+  --text: #52525b;
+  --text-h: #18181b;
+  --text-dim: #a1a1aa;
+  --border: rgba(0, 0, 0, 0.06);
+  --border-light: rgba(0, 0, 0, 0.1);
+  --green: #22c55e;
+  --green-bg: rgba(34, 197, 94, 0.12);
+  --amber: #f59e0b;
+  --amber-bg: rgba(245, 158, 11, 0.12);
+  --red: #ef4444;
+  --red-bg: rgba(239, 68, 68, 0.12);
+  --radius: 10px;
+  --radius-sm: 7px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.1);
+  --glass-blur: 24px;
+  --glass-blur-sm: 12px;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+  --transition: 0.2s ease;
+
+  color-scheme: light;
+}
+
+[data-accent="indigo"] { --accent: #6366f1; --accent-bg: rgba(99, 102, 241, 0.1); --accent-border: rgba(99, 102, 241, 0.25); }
+[data-accent="green"] { --accent: #22c55e; --accent-bg: rgba(34, 197, 94, 0.1); --accent-border: rgba(34, 197, 94, 0.25); }
+[data-accent="amber"] { --accent: #f59e0b; --accent-bg: rgba(245, 158, 11, 0.1); --accent-border: rgba(245, 158, 11, 0.25); }
+[data-accent="red"] { --accent: #ef4444; --accent-bg: rgba(239, 68, 68, 0.1); --accent-border: rgba(239, 68, 68, 0.25); }
+[data-accent="purple"] { --accent: #a855f7; --accent-bg: rgba(168, 85, 247, 0.1); --accent-border: rgba(168, 85, 247, 0.25); }
+[data-accent="blue"] { --accent: #3b82f6; --accent-bg: rgba(59, 130, 246, 0.1); --accent-border: rgba(59, 130, 246, 0.25); }
+[data-accent="pink"] { --accent: #ec4899; --accent-bg: rgba(236, 72, 153, 0.1); --accent-border: rgba(236, 72, 153, 0.25); }
+[data-accent="teal"] { --accent: #14b8a6; --accent-bg: rgba(20, 184, 166, 0.1); --accent-border: rgba(20, 184, 166, 0.25); }
+
+:root {
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 600px 400px at 15% 30%, var(--accent-bg) 0%, transparent 60%),
+    radial-gradient(ellipse 500px 500px at 85% 70%, var(--accent-bg) 0%, transparent 60%),
+    radial-gradient(ellipse 300px 400px at 50% 10%, var(--accent-bg) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+::selection {
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-dim);
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

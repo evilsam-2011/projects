@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POMODORO</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #0f0f1a;
+  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  image-rendering: pixelated;
+}
+
+.scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.15) 2px,
+    rgba(0,0,0,0.15) 4px
+  );
+  z-index: 100;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #ff006e;
+  text-shadow: 3px 3px 0 #7f0037, 0 0 20px rgba(255,0,110,0.3);
+  margin-bottom: 2rem;
+  letter-spacing: 4px;
+}
+
+.phase-label {
+  font-size: 0.7rem;
+  color: #00f5d4;
+  text-shadow: 0 0 15px rgba(0,245,212,0.5);
+  margin-bottom: 1.5rem;
+  height: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.timer-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.timer-display {
+  font-size: 5rem;
+  color: #00f5d4;
+  text-shadow: 4px 4px 0 #007a6a, 0 0 30px rgba(0,245,212,0.4);
+  letter-spacing: 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.progress-ring {
+  position: absolute;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: 1;
+  transform: rotate(-90deg);
+}
+
+.progress-ring .bg {
+  fill: none;
+  stroke: #1a1a2e;
+  stroke-width: 8;
+}
+
+.progress-ring .fg {
+  fill: none;
+  stroke: #00f5d4;
+  stroke-width: 8;
+  stroke-linecap: square;
+  stroke-dasharray: 4 4;
+  transition: stroke-dashoffset 0.3s;
+  filter: drop-shadow(0 0 6px rgba(0,245,212,0.4));
+}
+
+.session-count {
+  font-size: 0.65rem;
+  color: #ffb703;
+  margin-bottom: 2rem;
+  height: 1.2rem;
+  text-shadow: 0 0 10px rgba(255,183,3,0.3);
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.6rem;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background: #1a1a2e;
+  box-shadow:
+    3px 3px 0 #0a0a12,
+    -1px -1px 0 #2a2a4a,
+    inset -2px -2px 0 #0a0a12,
+    inset 2px 2px 0 #2a2a4a;
+  text-transform: uppercase;
+  transition: all 0.05s;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background: #2a2a4e;
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow:
+    1px 1px 0 #0a0a12,
+    -1px -1px 0 #2a2a4a,
+    inset -2px -2px 0 #0a0a12,
+    inset 2px 2px 0 #2a2a4a;
+}
+
+.btn-start {
+  color: #00ff41;
+  text-shadow: 0 0 10px rgba(0,255,65,0.3);
+}
+
+.btn-pause {
+  color: #ffb703;
+  text-shadow: 0 0 10px rgba(255,183,3,0.3);
+}
+
+.btn-reset {
+  color: #ff006e;
+  text-shadow: 0 0 10px rgba(255,0,110,0.3);
+}
+
+.settings {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 50;
+}
+
+.settings-btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.5rem;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  color: #6a6a8a;
+  background: transparent;
+  box-shadow:
+    2px 2px 0 #0a0a12,
+    -1px -1px 0 #2a2a4a,
+    inset -1px -1px 0 #0a0a12,
+    inset 1px 1px 0 #2a2a4a;
+  text-transform: uppercase;
+}
+
+.settings-btn:hover {
+  color: #8a8aaa;
+  background: #1a1a2e;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 200;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal {
+  background: #1a1a2e;
+  border: 4px solid #2a2a4a;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow:
+    8px 8px 0 #0a0a12,
+    -2px -2px 0 #2a2a4a;
+}
+
+.modal h2 {
+  font-size: 0.7rem;
+  color: #00f5d4;
+  margin-bottom: 1.5rem;
+  letter-spacing: 3px;
+}
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.setting-row label {
+  font-size: 0.45rem;
+  color: #8a8aaa;
+  letter-spacing: 1px;
+}
+
+.setting-row input {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.45rem;
+  width: 70px;
+  padding: 6px;
+  background: #0f0f1a;
+  border: 2px solid #2a2a4a;
+  color: #00f5d4;
+  text-align: center;
+  box-shadow: inset 2px 2px 0 #0a0a12;
+}
+
+.setting-row input:focus {
+  outline: none;
+  border-color: #00f5d4;
+}
+
+.btn-close {
+  margin-top: 1rem;
+  font-size: 0.5rem;
+  padding: 10px 24px;
+}
+
+.notification {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 150;
+  font-size: 1.2rem;
+  color: #ffb703;
+  text-shadow: 0 0 30px rgba(255,183,3,0.8), 0 0 60px rgba(255,183,3,0.4);
+  animation: pulse 0.5s ease-in-out infinite alternate;
+  text-align: center;
+  pointer-events: none;
+}
+
+.notification.show {
+  display: block;
+}
+
+@keyframes pulse {
+  from { transform: translate(-50%, -50%) scale(1); }
+  to { transform: translate(-50%, -50%) scale(1.1); }
+}
+
+@media (max-width: 500px) {
+  .timer-display { font-size: 2.5rem; }
+  .title { font-size: 1rem; }
+  .timer-wrapper { transform: scale(0.6); margin-bottom: 0; }
+  .btn { font-size: 0.5rem; padding: 10px 14px; }
+}
+</style>
+</head>
+<body>
+<div class="scanlines"></div>
+
+<button class="settings-btn" onclick="toggleSettings()" style="position:fixed;top:1rem;right:1rem;z-index:50">⚙</button>
+
+<div class="container">
+  <div class="title">🍅 POMODORO</div>
+  <div class="phase-label" id="phaseLabel">WORK</div>
+  <div class="timer-wrapper">
+    <div class="timer-display" id="timerDisplay">25:00</div>
+    <svg class="progress-ring" viewBox="0 0 400 400">
+      <circle class="bg" cx="200" cy="200" r="180"/>
+      <circle class="fg" id="progressCircle" cx="200" cy="200" r="180" stroke-dasharray="4 4" stroke-dashoffset="0"/>
+    </svg>
+  </div>
+
+  <div class="session-count" id="sessionCount">🍅 x 0</div>
+
+  <div class="controls">
+    <button class="btn btn-start" id="btnStart" onclick="startTimer()">START</button>
+    <button class="btn btn-pause" id="btnPause" onclick="pauseTimer()" style="display:none">PAUSE</button>
+    <button class="btn btn-reset" onclick="resetTimer()">RESET</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="settingsModal">
+  <div class="modal">
+    <h2>⚙ SETTINGS</h2>
+    <div class="setting-row">
+      <label>Work (min)</label>
+      <input type="number" id="workTime" value="25" min="1" max="120">
+    </div>
+    <div class="setting-row">
+      <label>Short Break (min)</label>
+      <input type="number" id="shortBreak" value="5" min="1" max="30">
+    </div>
+    <div class="setting-row">
+      <label>Long Break (min)</label>
+      <input type="number" id="longBreak" value="15" min="1" max="60">
+    </div>
+    <div class="setting-row">
+      <label>Long Break Every</label>
+      <input type="number" id="longBreakInterval" value="4" min="1" max="10">
+    </div>
+    <button class="btn btn-close" onclick="saveSettings()" style="color:#00f5d4">SAVE</button>
+  </div>
+</div>
+
+<div class="notification" id="notification"></div>
+
+<script>
+let state = {
+  phase: 'work',
+  seconds: 25 * 60,
+  totalSeconds: 25 * 60,
+  isRunning: false,
+  completedSessions: 0,
+  workTime: 25,
+  shortBreak: 5,
+  longBreak: 15,
+  longBreakInterval: 4,
+  intervalId: null,
+};
+
+function formatTime(secs) {
+  const m = Math.floor(secs / 60);
+  const s = secs % 60;
+  return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+}
+
+const CIRCUMFERENCE = 2 * Math.PI * 180;
+
+function updateDisplay() {
+  document.getElementById('timerDisplay').textContent = formatTime(state.seconds);
+  const pct = (state.totalSeconds - state.seconds) / state.totalSeconds;
+  const circle = document.getElementById('progressCircle');
+  circle.style.strokeDashoffset = CIRCUMFERENCE * (1 - Math.min(pct, 1));
+  document.getElementById('sessionCount').textContent = '🍅 x ' + state.completedSessions;
+
+  const phaseLabels = {
+    work: 'WORK',
+    shortBreak: 'SHORT BREAK',
+    longBreak: 'LONG BREAK',
+  };
+  const phaseColors = {
+    work: '#00f5d4',
+    shortBreak: '#00ff41',
+    longBreak: '#ffb703',
+  };
+  const el = document.getElementById('phaseLabel');
+  el.textContent = phaseLabels[state.phase];
+  el.style.color = phaseColors[state.phase];
+  const display = document.getElementById('timerDisplay');
+  display.style.color = phaseColors[state.phase];
+  display.style.textShadow = `4px 4px 0 ${phaseColors[state.phase]}44, 0 0 30px ${phaseColors[state.phase]}66`;
+  circle.style.stroke = phaseColors[state.phase];
+  circle.style.filter = `drop-shadow(0 0 6px ${phaseColors[state.phase]}66)`;
+}
+
+function showNotification(text) {
+  const el = document.getElementById('notification');
+  el.textContent = text;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 4000);
+}
+
+function playBeep() {
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.frequency.value = 880;
+    osc.type = 'square';
+    gain.gain.setValueAtTime(0.3, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
+    osc.start();
+    osc.stop(ctx.currentTime + 0.5);
+    setTimeout(() => {
+      const osc2 = ctx.createOscillator();
+      const gain2 = ctx.createGain();
+      osc2.connect(gain2);
+      gain2.connect(ctx.destination);
+      osc2.frequency.value = 1100;
+      osc2.type = 'square';
+      gain2.gain.setValueAtTime(0.3, ctx.currentTime);
+      gain2.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
+      osc2.start();
+      osc2.stop(ctx.currentTime + 0.5);
+    }, 500);
+  } catch(e) {}
+}
+
+function nextPhase() {
+  if (state.phase === 'work') {
+    state.completedSessions++;
+    if (state.completedSessions % state.longBreakInterval === 0) {
+      state.phase = 'longBreak';
+      state.seconds = state.longBreak * 60;
+    } else {
+      state.phase = 'shortBreak';
+      state.seconds = state.shortBreak * 60;
+    }
+    showNotification('BREAK TIME!');
+  } else {
+    state.phase = 'work';
+    state.seconds = state.workTime * 60;
+    showNotification('WORK TIME!');
+  }
+  state.totalSeconds = state.seconds;
+  state.isRunning = false;
+  clearInterval(state.intervalId);
+  state.intervalId = null;
+  document.getElementById('btnStart').style.display = 'inline';
+  document.getElementById('btnPause').style.display = 'none';
+  updateDisplay();
+  playBeep();
+}
+
+function tick() {
+  if (state.seconds <= 0) {
+    clearInterval(state.intervalId);
+    state.intervalId = null;
+    nextPhase();
+    return;
+  }
+  state.seconds--;
+  updateDisplay();
+}
+
+function startTimer() {
+  if (state.isRunning) return;
+  state.isRunning = true;
+  document.getElementById('btnStart').style.display = 'none';
+  document.getElementById('btnPause').style.display = 'inline';
+  state.intervalId = setInterval(tick, 1000);
+}
+
+function pauseTimer() {
+  state.isRunning = false;
+  clearInterval(state.intervalId);
+  state.intervalId = null;
+  document.getElementById('btnStart').style.display = 'inline';
+  document.getElementById('btnPause').style.display = 'none';
+  document.getElementById('btnStart').textContent = 'RESUME';
+}
+
+function resetTimer() {
+  state.isRunning = false;
+  clearInterval(state.intervalId);
+  state.intervalId = null;
+  state.phase = 'work';
+  state.seconds = state.workTime * 60;
+  state.totalSeconds = state.seconds;
+  state.completedSessions = 0;
+  document.getElementById('btnStart').style.display = 'inline';
+  document.getElementById('btnPause').style.display = 'none';
+  document.getElementById('btnStart').textContent = 'START';
+  updateDisplay();
+}
+
+function toggleSettings() {
+  const modal = document.getElementById('settingsModal');
+  modal.classList.toggle('open');
+  if (modal.classList.contains('open')) {
+    document.getElementById('workTime').value = state.workTime;
+    document.getElementById('shortBreak').value = state.shortBreak;
+    document.getElementById('longBreak').value = state.longBreak;
+    document.getElementById('longBreakInterval').value = state.longBreakInterval;
+  }
+}
+
+function saveSettings() {
+  const w = parseInt(document.getElementById('workTime').value) || 25;
+  const s = parseInt(document.getElementById('shortBreak').value) || 5;
+  const l = parseInt(document.getElementById('longBreak').value) || 15;
+  const li = parseInt(document.getElementById('longBreakInterval').value) || 4;
+  state.workTime = Math.max(1, w);
+  state.shortBreak = Math.max(1, s);
+  state.longBreak = Math.max(1, l);
+  state.longBreakInterval = Math.max(1, li);
+  resetTimer();
+  document.getElementById('settingsModal').classList.remove('open');
+}
+
+updateDisplay();
+</script>
+</body>
+</html>
